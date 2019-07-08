@@ -1,0 +1,143 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Enroling courses</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+
+    <ion-grid>
+        <ion-row>
+  
+        <!-- Menu col -->
+        <ion-col col-2>
+          
+            <div id="data">
+                <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+                <p>Katarzyna Brzozowski</p>
+                <button id="butt" ion-button small (click) ="log_out()">Log out</button>
+            </div>
+  
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        Student area
+                  </ion-item-divider>
+  
+                  <br>
+                  <button ion-item (click)="personal_data()">
+                      <ion-icon name="contact" item-left></ion-icon>
+                      Personal data
+                  </button>
+                  <button ion-item onclick="location.href='https://poczta.edu.p.lodz.pl/mail#1';">
+                      <ion-icon name="mail" item-left></ion-icon>
+                      Check e-mail
+                  </button>
+                  <button ion-item (click)="notifications()">
+                      <ion-icon name="chatboxes" item-left></ion-icon>
+                      Notifications
+                  </button>
+                  <button ion-item (click)="my_courses()">
+                      <ion-icon name="book" item-left></ion-icon>
+                      My courses
+                  </button>
+                  <button ion-item (click)="courses()">
+                      <ion-icon name="list-box" item-left></ion-icon>
+                      Enroling courses
+                  </button>
+                  <button ion-item (click)="timetable()">
+                      <ion-icon name="calendar" item-left></ion-icon>
+                      My timetable
+                  </button>
+                  <button ion-item (click)="exams()">
+                      <ion-icon name="school" item-left></ion-icon>
+                      My exams
+                  </button>
+  
+                </ion-list>
+            </div>
+            
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        External webs
+                  </ion-item-divider>
+  
+                  <br>
+  
+                  <button ion-item onclick="location.href='https://www.p.lodz.pl/pl';">
+                      <ion-icon name="browsers" item-left></ion-icon>
+                      Politechnika Łódzka
+                  </button>
+  
+                  <button ion-item onclick="location.href='https://www.ife.p.lodz.pl/';">
+                      <ion-icon name="browsers" item-left></ion-icon>
+                      IFE
+                  </button>
+                </ion-list>
+            </div>
+  
+          </ion-col>
+
+          <!-- New courses -->
+          <ion-col>
+
+            <div id="cour">
+
+               <h1>AVAILABLE COURSES YOU CAN ENROL IN:</h1>
+               <br>
+                <ion-grid>
+                    <ion-row>
+
+                        <!-- Results -->                        
+                        <ion-col col-5>
+                            <ion-scroll scrollY="true" style="height: 300%">
+                                <ion-list scroll="true">
+                                    <button ion-item (click)="new_course(item['name'], item['bachelor'], item['year'])" *ngFor="let item of aux">
+                                        <div id="courses_list">{{item["name"]}}</div><br>
+                                        <div id="bachelor">{{item["bachelor"]}}<br>{{item["year"]}}</div>
+                                    </button>
+                                </ion-list>
+                            </ion-scroll>
+                                
+                        </ion-col>
+
+                        <ion-col>
+
+                        </ion-col>
+
+                        <!-- Search bars -->
+                        <ion-col col-6>
+
+                                Search the name of the course:
+                                <ion-searchbar (ionInput)="getCourseName($event)"></ion-searchbar>
+            
+                                Search bachelor (Informatyka, Information Technology or Computer Science):
+                                <ion-searchbar (ionInput)="getCourseBachelor($event)"></ion-searchbar>
+    
+                                Search year or semester:
+                                <ion-searchbar (ionInput)="getCourseYear($event)"></ion-searchbar>
+    
+                            </ion-col>
+
+                    </ion-row>
+                </ion-grid>
+
+                    
+            </div>
+
+          </ion-col>
+
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

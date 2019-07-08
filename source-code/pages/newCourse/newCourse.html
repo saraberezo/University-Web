@@ -1,0 +1,159 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{course_name}}</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+    
+    <ion-grid>
+        <ion-row>
+  
+        <!-- Menu col -->
+        <ion-col col-2>
+          
+            <div id="data">
+                <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+                <p>Katarzyna Brzozowski</p>
+                <button ion-button small (click) ="log_out()">Log out</button>
+            </div>
+  
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        Student area
+                  </ion-item-divider>
+  
+                  <br>
+                  <button ion-item (click)="personal_data()">
+                      <ion-icon name="contact" item-left></ion-icon>
+                      Personal data
+                  </button>
+                  <button ion-item onclick="location.href='https://poczta.edu.p.lodz.pl/mail#1';">
+                      <ion-icon name="mail" item-left></ion-icon>
+                      Check e-mail
+                  </button>
+                  <button ion-item (click)="notifications()">
+                      <ion-icon name="chatboxes" item-left></ion-icon>
+                      Notifications
+                  </button>
+                  <button ion-item (click)="my_courses()">
+                      <ion-icon name="book" item-left></ion-icon>
+                      My courses
+                  </button>
+                  <button ion-item (click)="courses()">
+                      <ion-icon name="list-box" item-left></ion-icon>
+                      Enroling courses
+                  </button>
+                  <button ion-item (click)="timetable()">
+                      <ion-icon name="calendar" item-left></ion-icon>
+                      My timetable
+                  </button>
+                  <button ion-item (click)="exams()">
+                      <ion-icon name="school" item-left></ion-icon>
+                      My exams
+                  </button>
+  
+                </ion-list>
+            </div>
+            
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        External webs
+                  </ion-item-divider>
+  
+                  <br>
+  
+                  <button ion-item onclick="location.href='https://www.p.lodz.pl/pl';">
+                      <ion-icon name="browsers" item-left></ion-icon>
+                      Politechnika Łódzka
+                  </button>
+  
+                  <button ion-item onclick="location.href='https://www.ife.p.lodz.pl/';">
+                      <ion-icon name="browsers" item-left></ion-icon>
+                      IFE
+                  </button>
+                </ion-list>
+            </div>
+  
+          </ion-col>
+
+          <ion-col>
+
+              <div id="opencourse">
+
+                <h1>{{course_name}}</h1>
+                <br>
+                <div id="box">
+
+                    <h2>Description</h2>
+
+                    <p *ngIf= "course_name == 'Computers architecture'"> {{description_CA}} </p>
+                    <p *ngIf= "course_name == 'Advanced Computer Networking'"> {{description_ACN}} </p>
+                    <p *ngIf= "course_name == 'Fields and Waves'"> {{description_FW}} </p>
+                    <p *ngIf= "course_name == 'Data Communication'"> {{description_DC}} </p>
+                    <p *ngIf= "course_name == 'Multimedia Signal Processing'"> {{description_MSP}} </p>
+                    <p *ngIf= "course_name == 'Digital Signal Processing'"> {{description_DSP}} </p>
+                    <p *ngIf= "course_name == 'Wireless and Mobile Networks'"> {{description_WMN}} </p>
+                    <p *ngIf= "course_name == 'Intelligent Systems Programming'"> {{description_ISP}} </p>
+                    <p *ngIf= "course_name == 'Integrated Systems Design'"> {{description_ISD}} </p>
+                    <p *ngIf= "course_name == 'Network and Switching Theory'"> {{description_NST}} </p>
+                    <p *ngIf= "course_name == 'Information Systems'"> {{description_IS}} </p>
+                    <p *ngIf= "course_name == 'Telematics Arquitectures and Services'"> {{description_TAS}} </p>
+
+                </div>
+
+                <br><br>
+
+                
+                <div id="box">
+
+                    <h3>Bachelor</h3>
+
+                    <p>{{bachelor}}</p>
+
+                </div>
+
+                <br><br>
+
+                <div id="box">
+
+                    <h3>Year and semester</h3>
+
+                    <p>{{year}}</p>
+
+                </div>
+
+                <br><br>
+
+                <div id="box">
+
+                    <h3>Enroling:</h3>
+
+                    <ion-item>
+                        <ion-input type="password" [(ngModel)]="key" (keyup.enter)="enterKey(key)" 
+                            placeholder="Enrolment key" clearInput></ion-input>
+                    </ion-item>
+
+                    <p *ngIf= "correct == true" id="wrong"> Incorrect key. Try again. </p>
+
+                </div>
+
+              </div>
+
+          </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

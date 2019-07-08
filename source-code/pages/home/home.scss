@@ -1,0 +1,36 @@
+page-home {
+
+    text-align: center;
+
+    #table {
+        margin-top: 11%;
+    }
+
+    .item {
+        width: 50%;
+        margin: auto;
+    }
+
+    #label {
+        font-weight: bold;
+        font-size: 20px;
+        color: #336688;
+        margin-left: 5%;
+    }
+
+    .button {
+        background: #336688;
+    }
+
+    #avatar {
+        background: white;
+        margin-left: 25%;
+    }
+
+    #wrong {
+        color: #7D1111;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+}

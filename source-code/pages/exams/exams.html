@@ -1,0 +1,319 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Exams</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+
+    <ion-grid>
+        <ion-row>
+  
+          <!-- Menu col -->
+          <ion-col col-2>
+            
+            <div id="data">
+                <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+                <p>Katarzyna Brzozowski</p>
+                <button ion-button small (click) ="log_out()">Log out</button>
+            </div>
+  
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        Student area
+                  </ion-item-divider>
+  
+                  <br>
+                  <button ion-item (click)="personal_data()">
+                      <ion-icon name="contact" item-left></ion-icon>
+                      Personal data
+                  </button>
+                  <button ion-item (click)="email()">
+                      <ion-icon name="mail" item-left></ion-icon>
+                      Check e-mail
+                  </button>
+                  <button ion-item (click)="notifications()">
+                      <ion-icon name="chatboxes" item-left></ion-icon>
+                      Notifications
+                  </button>
+                  <button ion-item (click)="my_courses()">
+                      <ion-icon name="book" item-left></ion-icon>
+                      My courses
+                  </button>
+                  <button ion-item (click)="courses()">
+                      <ion-icon name="list-box" item-left></ion-icon>
+                      Enroling courses
+                  </button>
+                  <button ion-item (click)="timetable()">
+                      <ion-icon name="calendar" item-left></ion-icon>
+                      My timetable
+                  </button>
+                  <button ion-item (click)="exams()">
+                      <ion-icon name="school" item-left></ion-icon>
+                      My exams
+                  </button>
+  
+                </ion-list>
+            </div>
+            
+            <div id="data">
+                <ion-list>
+  
+                  <ion-item-divider id="menu">
+                        External webs
+                    </ion-item-divider>
+  
+                    <br>
+                    <ion-item>
+                        <ion-icon name="browsers" item-left></ion-icon>
+                        <a href="https://www.p.lodz.pl/pl">Politechnika Łódzka</a>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon name="browsers" item-left></ion-icon>
+                        <a href="https://www.ife.p.lodz.pl/">IFE</a>
+                    </ion-item>        
+  
+                </ion-list>
+            </div>
+  
+          </ion-col>
+
+          <!-- Exams timetable -->
+          <ion-col>
+
+            <div id="ex">
+                
+                <h1>MY EXAMS</h1>
+                <br>
+                <h6>Here you can only find the dates of the exams. You can check your grades on each subject page
+                    (by clicking on the name of the subject in "My courses" page)</h6>
+                <br>
+                <ion-grid>
+                    <ion-row>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3> September / Wrzesień</h3> </ion-col></ion-row>
+                                <ion-row id="exams">
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>October / Październik</h3> </ion-col></ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>1st</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lesson 1 (Algebra and mathematics)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>14th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Project 1 (GUI Programming)</p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>November / Listopad</h3> </ion-col></ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>10th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lab exam (I) (Image Processing)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>23rd</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lab Project (Artificial Intelligence)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>24th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lesson 2 (Algebra and mathematics)</p>
+                                        <p>Essay (Artificial Intelligence)</p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>December / Grudzień</h3> </ion-col></ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>1st</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lecture exam(Artificial Intelligence)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>2nd</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Project 2 (GUI Programming)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>10th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Exercices (First part) (Algebra and mathematics)</p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row><ion-col></ion-col></ion-row>
+
+                    <ion-row>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>January / Styczeń</h3> </ion-col></ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>10th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lesson 4-5 (Algebra and mathematics)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>17th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Final exam (Computer Networking)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>23rd</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Lab exam (II) (Image Processing)</p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row id="exams">
+                                    <ion-col col-3>
+                                        <p>29th</p>
+                                    </ion-col>
+                                    <ion-col>
+                                        <p>Oral exam (Image Processing)</p>
+                                        <p>Project 3 (GUI Programming)</p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>February / Luty</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>March / Marsz</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3>April / Kwiecień</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        
+                    </ion-row>
+
+                    <ion-row><ion-col></ion-col></ion-row>
+                    
+                    <ion-row>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3> May / Może</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3> June / Czerwiec</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3> July / Lipiec</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+
+                        <ion-col>
+                            <ion-grid id="table">
+                                <ion-row id="months"><ion-col> <h3> August / Sierpień</h3> </ion-col></ion-row>
+                                <ion-row>
+                                    <ion-col><p id="exams">Not available</p></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        
+                    </ion-row>
+    
+                </ion-grid>
+            
+            </div>
+              
+          </ion-col>
+        
+        </ion-row>
+    
+    </ion-grid>
+
+</ion-content>

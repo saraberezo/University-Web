@@ -1,0 +1,9 @@
+export { HomePage } from './home/home';
+export { MainPage } from './main/main';
+export { CoursesPage } from './courses/courses';
+export { ExamsPage } from './exams/exams';
+export { NotificationsPage } from './notifications/notifications';
+export { PersonalDataPage } from './personalData/personalData';
+export { TimetablePage } from './timetable/timetable';
+export { OpenCoursePage } from './openCourse/openCourse';
+export { NewCoursePage } from './newCourse/newCourse';

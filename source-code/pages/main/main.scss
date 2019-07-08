@@ -1,0 +1,47 @@
+page-main {
+
+    .body {
+        margin-left: 1%;
+    }
+
+    #menu {
+        background-color: #336688;
+        color: white;
+    }
+
+    .button {
+        background: #336688;
+    }
+
+    #data {
+        box-shadow: 0 0 5px gray;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-top: 2%;
+    }
+
+    #my_courses {
+        box-shadow: 0 0 5px gray;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-top: 2%;
+    }
+
+    #avatar {
+        height: 5vw; 
+        width: 5vw; 
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px gray;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #lista2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}

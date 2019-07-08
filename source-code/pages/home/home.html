@@ -1,0 +1,33 @@
+<ion-content padding>
+
+    <ion-grid id="table">
+        <ion-row>
+
+          <ion-col col-4>
+            <ion-img width="500" height="500" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png" id="avatar"></ion-img>
+          </ion-col>
+
+          <ion-col>
+
+            <ion-item>
+                <ion-label id="label">Login:</ion-label>
+                <ion-input type="email" [(ngModel)]="email" placeholder="Introduce your email"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label id="label">Password:</ion-label>
+                <ion-input type="password" [(ngModel)]="password" placeholder="Introduce your password"></ion-input>
+              </ion-item>
+            
+              <br><br>
+              <button ion-button (click) ="login(email, password)">Log in</button>
+
+              <br><br>
+              <p id="wrong" *ngIf=" fail == true" > Wrong e-mail or password </p>
+
+          </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,164 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My courses</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+
+  <ion-grid>
+      <ion-row>
+
+        <!-- Menu col -->
+        <ion-col col-2>
+          
+          <div id="data">
+              <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+              <p>Katarzyna Brzozowski</p>
+              <button ion-button small (click) ="log_out()">Log out</button>
+          </div>
+
+          <div id="data">
+              <ion-list>
+
+                <ion-item-divider id="menu">
+                      Student area
+                </ion-item-divider>
+
+                <br>
+                <button ion-item (click)="personal_data()">
+                    <ion-icon name="contact" item-left></ion-icon>
+                    Personal data
+                </button>
+                <button ion-item onclick='location.href="https://poczta.edu.p.lodz.pl/mail#1";'>
+                    <ion-icon name="mail" item-left></ion-icon>
+                    Check e-mail
+                </button>
+                <button ion-item (click)="notifications()">
+                    <ion-icon name="chatboxes" item-left></ion-icon>
+                    Notifications
+                </button>
+                <button ion-item (click)="my_courses()">
+                    <ion-icon name="book" item-left></ion-icon>
+                    My courses
+                </button>
+                <button ion-item (click)="courses()">
+                    <ion-icon name="list-box" item-left></ion-icon>
+                    Enroling courses
+                </button>
+                <button ion-item (click)="timetable()">
+                    <ion-icon name="calendar" item-left></ion-icon>
+                    My timetable
+                </button>
+                <button ion-item (click)="exams()">
+                    <ion-icon name="school" item-left></ion-icon>
+                    My exams
+                </button>
+
+              </ion-list>
+          </div>
+          
+          <div id="data">
+              <ion-list>
+
+                <ion-item-divider id="menu">
+                      External webs
+                </ion-item-divider>
+
+                <br>
+
+                <button ion-item onclick="location.href='https://www.p.lodz.pl/pl';">
+                    <ion-icon name="browsers" item-left></ion-icon>
+                    Politechnika Łódzka
+                </button>
+
+                <button ion-item onclick="location.href='https://www.ife.p.lodz.pl/';">
+                    <ion-icon name="browsers" item-left></ion-icon>
+                    IFE
+                </button>
+              </ion-list>
+          </div>
+
+        </ion-col>
+
+        <!-- My courses -->
+        <ion-col>
+            <ion-list id="lista2">
+
+                <h1>MY COURSES</h1>
+
+                <br><br>
+                <h4>Computer Science</h4>
+                <div id="my_courses">
+                    <ion-list id="lista2">
+                        <ion-item-divider>
+                            First year (Winter Semester)
+                        </ion-item-divider>
+
+                        <button ion-item (click)="open_course('Algebra and mathematics')">
+                            Algebra and mathematics
+                        </button>
+                    </ion-list>
+                        <br>
+                    <ion-list id="lista2">
+                        <ion-item-divider>
+                            Third year (Winter Semester)
+                        </ion-item-divider>
+                        <button ion-item (click)="open_course('Image Processing')">
+                            Image Processing
+                        </button>
+                        <button ion-item (click)="open_course('GUI Programming')">
+                            GUI Programming
+                        </button>
+                        <button ion-item (click)="open_course('Computer Networking')">
+                            Computer Networking
+                        </button>
+                    </ion-list>
+                </div>
+
+
+                <br><br><br>
+                <h4>Information Technology</h4>
+                <div id="my_courses">
+                    <ion-list id="lista2">
+                      <ion-item-divider>
+                          Forth year (Winter Semester)
+                      </ion-item-divider>
+
+                      <button ion-item (click)="open_course('Artificial Intelligence')">
+                          Artificial Intelligence
+                      </button>
+                    </ion-list>
+                </div>
+                    
+                <br><br><br>
+                <h4>Informatyka</h4>
+                <div id="my_courses">
+                    <ion-list id="lista2">
+                        <ion-item-divider>
+                            Third year (Summer Semester)
+                        </ion-item-divider>
+                        <button ion-item (click)="open_course('Operating Systems')">
+                            Operating Systems
+                        </button>
+                        <button ion-item (click)="open_course('Computer Hardware')">
+                            Computer Hardware
+                        </button>
+                        <button ion-item (click)="open_course('Firewalls')">
+                            Firewalls
+                        </button>
+                    </ion-list>
+                </div>
+
+            </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

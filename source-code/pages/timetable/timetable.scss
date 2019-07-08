@@ -1,0 +1,62 @@
+page-timetable {
+
+    #timetable {
+        align-content: center;
+        margin-left: 5%;
+    }
+
+    #table {
+        font-size: 16px;
+        text-align: center;
+        box-shadow: 0 0 5px gray;
+
+        .col{
+            border: 1px solid black;
+            align-items: center;
+        }
+    }
+
+    #class {
+        font-size: 10px;
+    }
+
+    #week_days {
+        font-size: 20px;
+        background-color: #336688;
+        color: white;
+    }
+
+    .body {
+        margin-left: 1%;
+    }
+
+    #menu {
+        background-color: #336688;
+        color: white;
+    }
+
+    .button {
+        background: #336688;
+    }
+
+    #data {
+        box-shadow: 0 0 5px gray;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-top: 2%;
+    }
+
+    #avatar {
+        height: 5vw; 
+        width: 5vw; 
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px gray;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}

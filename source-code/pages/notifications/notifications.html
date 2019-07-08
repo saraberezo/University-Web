@@ -1,0 +1,140 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Notifications</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+
+    <ion-grid>
+        <ion-row>
+  
+        <!-- Menu col -->
+        <ion-col col-2>
+          
+                <div id="data">
+                    <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+                    <p>Katarzyna Brzozowski</p>
+                    <button ion-button small (click) ="log_out()">Log out</button>
+                </div>
+      
+                <div id="data">
+                    <ion-list>
+      
+                      <ion-item-divider id="menu">
+                            Student area
+                      </ion-item-divider>
+      
+                      <br>
+                      <button ion-item (click)="personal_data()">
+                          <ion-icon name="contact" item-left></ion-icon>
+                          Personal data
+                      </button>
+                      <button ion-item onclick="location.href='https://poczta.edu.p.lodz.pl/mail#1';">
+                          <ion-icon name="mail" item-left></ion-icon>
+                          Check e-mail
+                      </button>
+                      <button ion-item (click)="notifications()">
+                          <ion-icon name="chatboxes" item-left></ion-icon>
+                          Notifications
+                      </button>
+                      <button ion-item (click)="my_courses()">
+                          <ion-icon name="book" item-left></ion-icon>
+                          My courses
+                      </button>
+                      <button ion-item (click)="courses()">
+                          <ion-icon name="list-box" item-left></ion-icon>
+                          Enroling courses
+                      </button>
+                      <button ion-item (click)="timetable()">
+                          <ion-icon name="calendar" item-left></ion-icon>
+                          My timetable
+                      </button>
+                      <button ion-item (click)="exams()">
+                          <ion-icon name="school" item-left></ion-icon>
+                          My exams
+                      </button>
+      
+                    </ion-list>
+                </div>
+                
+                <div id="data">
+                    <ion-list>
+      
+                      <ion-item-divider id="menu">
+                            External webs
+                      </ion-item-divider>
+      
+                      <br>
+      
+                      <button ion-item onclick="location.href='https://www.p.lodz.pl/pl';">
+                          <ion-icon name="browsers" item-left></ion-icon>
+                          Politechnika Łódzka
+                      </button>
+      
+                      <button ion-item onclick="location.href='https://www.ife.p.lodz.pl/';">
+                          <ion-icon name="browsers" item-left></ion-icon>
+                          IFE
+                      </button>
+                    </ion-list>
+                </div>
+      
+              </ion-col>
+
+          <!-- Notifications -->
+          <ion-col>
+              
+              <div id="not">
+                    <h1>MY NOTIFICATIONS</h1>
+
+                    <br><br>
+                    <h4> You have: 0 new notifications!</h4>
+
+                    <br><br>
+              
+                    <ion-list>
+
+                        <ion-item-divider>
+                            24-12-2018: Merry Christmas!
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            12-12-2018: Christmas Holidays starts on 22nd of December.
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            30-11-2018: One new exam has been added to your calendar!
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            05-11-2018: Remember that all lessons are cancelled on Monday 12 of November due to Polish Independence Day.
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            14-10-2018: One new exam has been added to your calendar!
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            10-10-2018: One new exam has been added to your calendar!
+                        </ion-item-divider>
+
+                        <ion-item-divider>
+                            20-09-2018: Remember that lessons starts the 1st of October
+                        </ion-item-divider>
+
+                    </ion-list>
+                
+              </div>
+
+          </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

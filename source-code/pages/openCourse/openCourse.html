@@ -1,0 +1,228 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{course_name}}</ion-title>
+    <ion-buttons end style="margin-right: 1%">
+            <img width="170" height="60" src="http://klientocentryczni.pl/wp-content/uploads/2017/11/p%C5%82.png">
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="body">
+
+    <ion-grid>
+        <ion-row>
+  
+        <!-- Menu col -->
+        <ion-col col-2>
+          
+                <div id="data">
+                    <ion-img width="80" height="80" src="source-code/avatar.png" id="avatar"></ion-img>
+                    <p>Katarzyna Brzozowski</p>
+                    <button ion-button small (click) ="log_out()">Log out</button>
+                </div>
+      
+                <div id="data">
+                    <ion-list>
+      
+                      <ion-item-divider id="menu">
+                            Student area
+                      </ion-item-divider>
+      
+                      <br>
+                      <button ion-item (click)="personal_data()">
+                          <ion-icon name="contact" item-left></ion-icon>
+                          Personal data
+                      </button>
+                      <button ion-item onclick="location.href='https://poczta.edu.p.lodz.pl/mail#1';">
+                          <ion-icon name="mail" item-left></ion-icon>
+                          Check e-mail
+                      </button>
+                      <button ion-item (click)="notifications()">
+                          <ion-icon name="chatboxes" item-left></ion-icon>
+                          Notifications
+                      </button>
+                      <button ion-item (click)="my_courses()">
+                          <ion-icon name="book" item-left></ion-icon>
+                          My courses
+                      </button>
+                      <button ion-item (click)="courses()">
+                          <ion-icon name="list-box" item-left></ion-icon>
+                          Enroling courses
+                      </button>
+                      <button ion-item (click)="timetable()">
+                          <ion-icon name="calendar" item-left></ion-icon>
+                          My timetable
+                      </button>
+                      <button ion-item (click)="exams()">
+                          <ion-icon name="school" item-left></ion-icon>
+                          My exams
+                      </button>
+      
+                    </ion-list>
+                </div>
+                
+                <div id="data">
+                    <ion-list>
+      
+                      <ion-item-divider id="menu">
+                            External webs
+                      </ion-item-divider>
+      
+                      <br>
+      
+                      <button ion-item onclick="location.href='https://www.p.lodz.pl/pl';">
+                          <ion-icon name="browsers" item-left></ion-icon>
+                          Politechnika Łódzka
+                      </button>
+      
+                      <button ion-item onclick="location.href='https://www.ife.p.lodz.pl/';">
+                          <ion-icon name="browsers" item-left></ion-icon>
+                          IFE
+                      </button>
+                    </ion-list>
+                </div>
+      
+              </ion-col>
+
+          <ion-col>
+              <div id="opencourse">
+
+                <br>
+                <div id="box">
+
+                    <h2>Description</h2>
+
+                    <p *ngIf= "course_name == 'Algebra and mathematics'"> {{description_algebra}} </p>
+                    <p *ngIf= "course_name == 'Image Processing'"> {{description_IP}} </p>
+                    <p *ngIf= "course_name == 'GUI Programming'"> {{description_GUI}} </p>
+                    <p *ngIf= "course_name == 'Computer Networking'"> {{description_CN}} </p>
+                    <p *ngIf= "course_name == 'Artificial Intelligence'"> {{description_AI}} </p>
+                    <p *ngIf= "course_name == 'Operating Systems'"> {{description_OS}} </p>
+                    <p *ngIf= "course_name == 'Computer Hardware'"> {{description_CH}} </p>
+                    <p *ngIf= "course_name == 'Firewalls'"> {{description_Firewalls}} </p>
+
+                </div>
+
+                <br><br>
+
+                <div id="box">
+
+                    <h3>Documents</h3>
+
+                    <p *ngIf= "course_name == 'Algebra and mathematics'">
+                        <button ion-item *ngFor="let item of documents_algebra">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Image Processing'">
+                        <button ion-item *ngFor="let item of documents_IP">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'GUI Programming'">
+                        <button ion-item *ngFor="let item of documents_GUI">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Computer Networking'">
+                        <button ion-item *ngFor="let item of documents_CN">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Artificial Intelligence'">
+                        <button ion-item *ngFor="let item of documents_AI">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Operating Systems'">
+                        <button ion-item *ngFor="let item of documents_OS">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Computer Hardware'">
+                        <button ion-item *ngFor="let item of documents_CH">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Firewalls'">
+                        <button ion-item *ngFor="let item of documents_Firewalls">
+                            <p id="for">{{item}}</p>
+                        </button>
+                    </p>
+
+                </div>
+
+                <br><br>
+
+                <div id="box">
+
+                    <h3>Grades</h3>
+
+                    <p *ngIf= "course_name == 'Algebra and mathematics'">
+                        <ion-item *ngFor="let item of grades_algebra">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Image Processing'">
+                        <ion-item *ngFor="let item of grades_IP">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'GUI Programming'">
+                        <ion-item *ngFor="let item of grades_GUI">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Computer Networking'">
+                        <ion-item *ngFor="let item of grades_CN">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Artificial Intelligence'">
+                        <ion-item *ngFor="let item of grades_AI">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Operating Systems'">
+                        <ion-item *ngFor="let item of grades_OS">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Computer Hardware'">
+                        <ion-item *ngFor="let item of grades_CH">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                    <p *ngIf= "course_name == 'Firewalls'">
+                        <ion-item *ngFor="let item of grades_Firewalls">
+                            <p id="for">{{item}}</p>
+                        </ion-item>
+                    </p>
+
+                </div>
+
+              </div>
+
+          </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

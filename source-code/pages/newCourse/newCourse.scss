@@ -1,0 +1,56 @@
+page-newcourse {
+
+    .body {
+        margin-left: 1%;
+    }
+
+    #menu {
+        background-color: #336688;
+        color: white;
+    }
+
+    #butt {
+        background: #336688;
+    }
+
+    #data {
+        box-shadow: 0 0 5px gray;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-top: 2%;
+    }
+    
+    #avatar {
+        height: 5vw; 
+        width: 5vw; 
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px gray;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #opencourse {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 16px;
+    }
+
+    #box {
+        box-shadow: 0 0 5px gray;
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+    }
+
+    #wrong {
+        color: #7D1111;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 2%;
+    }
+
+}
